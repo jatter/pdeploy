@@ -54,7 +54,14 @@ public class JavaWebDeployController {
 		mv.addObject("detail", javaWebDeployService.getDetail(uuid));
 		return mv;
 	}
-
+	/**
+	 * 添加参数管理页面
+	 */
+	@RequestMapping(value = "parameterManagement", method = RequestMethod.GET)
+	public ModelAndView parameterManagement() {
+		ModelAndView mv = new ModelAndView("javawebdeploy/parameter-management");
+		return mv;
+	}
 	/**
 	 * ajax查看运行状态
 	 */

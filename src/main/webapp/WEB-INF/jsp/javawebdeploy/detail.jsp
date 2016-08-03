@@ -101,6 +101,7 @@
 							<a class="btn waves-light waves-effect white-text" id="btn-deploy">部署</a>
 							<a class="btn waves-light waves-effect white-text" id="btn-restart">重启</a>
 							<a class="btn waves-light waves-effect white-text" id="btn-stop">停止</a>
+							<a class="btn waves-light waves-effect white-text" id="btn-parameterManagement" href="${pageContext.request.contextPath}/javawebdeploy/parameterManagement">参数管理</a>
 						</p>
 					</div>
 				</div>
@@ -129,7 +130,7 @@
 	<footer class="page-footer" style="padding-top: 0; margin-top: 40px;">
       <div class="footer-copyright">
         <div class="container">
-        Copyright © 2016 <a class="grey-text text-lighten-4" href="http://xxgblog.com" target="_blank">http://xxgblog.com</a>. All rights reserved.
+        Copyright © 2016 <a c3lass="grey-text text-lighten-4" href="http://xxgblog.com" target="_blank">http://xxgblog.com</a>. All rights reserved.
         <a class="grey-text text-lighten-4 right" href="https://github.com/wucao/JDeploy" target="_blank">GitHub</a>
         </div>
       </div>
