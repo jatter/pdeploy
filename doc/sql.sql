@@ -17,3 +17,13 @@ CREATE TABLE `java_web_deploy` (
   `port` int(11) NOT NULL COMMENT '端口号',
   PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `parameter_management` (
+  `parameter_id`  VARCHAR(36) NOT null COMMENT '参数ID',
+  `uuid`  VARCHAR(36) NOT null COMMENT 'UUID',
+  `parameter_name` VARCHAR(255) NOT null COMMENT '参数名称',
+  `parameter_value` VARCHAR(255) NOT null COMMENT '参数值',
+  `parameter_path` VARCHAR(255) NOT null COMMENT '参数路径',
+  `regular` VARCHAR(255) NOT null COMMENT '正则匹配',
+  PRIMARY KEY (`parameter_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

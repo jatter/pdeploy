@@ -1,6 +1,8 @@
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\domain\JavaWebDeployInfo.java
+D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\mapper\JavaWebParameterMapper.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\controller\JavaWebDeployController.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\domain\JavaDeployInfo.java
+D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\domain\JavaWebParameterInfo.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\mapper\JavaWebDeployMapper.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\controller\IndexController.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\mapper\JavaDeployMapper.java
@@ -8,6 +10,7 @@ D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\websocket\LogWebSocketHa
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\util\ShellUtil.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\websocket\LogThread.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\service\JavaWebDeployService.java
+D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\service\JavaWebParameterService.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\util\QueryStringParser.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\service\JavaDeployService.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\controller\JavaDeployController.java

@@ -2,6 +2,7 @@ package com.xxg.jdeploy.controller;
 
 import com.xxg.jdeploy.domain.JavaWebDeployInfo;
 import com.xxg.jdeploy.service.JavaWebDeployService;
+import com.xxg.jdeploy.service.JavaWebParameterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.HtmlUtils;
 
+import javax.lang.model.element.VariableElement;
 import java.io.IOException;
 import java.util.UUID;
 
@@ -25,6 +27,8 @@ public class JavaWebDeployController {
 	@Autowired
 	private JavaWebDeployService javaWebDeployService;
 
+	@Autowired
+	private JavaWebParameterService javaWebParameterService;
 	/**
 	 * 添加项目页面
 	 */
@@ -55,13 +59,15 @@ public class JavaWebDeployController {
 		return mv;
 	}
 	/**
-	 * 添加参数管理页面
+	 * 获取参数列表
 	 */
-	@RequestMapping(value = "parameterManagement", method = RequestMethod.GET)
-	public ModelAndView parameterManagement() {
-		ModelAndView mv = new ModelAndView("javawebdeploy/parameter-management");
+	@RequestMapping(value = "parameterManagement/{uuid}", method = RequestMethod.GET)
+	public ModelAndView parameterManagement(@PathVariable String uuid) {
+		ModelAndView mv = new ModelAndView("javawebdeploy/parameterManagement");
+		mv.addObject("parameterManagement", javaWebParameterService.getParameter(uuid));
 		return mv;
 	}
+
 	/**
 	 * ajax查看运行状态
 	 */
