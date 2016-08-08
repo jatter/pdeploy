@@ -1,6 +1,7 @@
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\domain\JavaWebDeployInfo.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\mapper\JavaWebParameterMapper.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\controller\JavaWebDeployController.java
+D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\controller\SystemParamController.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\domain\JavaDeployInfo.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\domain\JavaWebParameterInfo.java
 D:\workspace\gsxm\pdeploy\src\main\java\com\xxg\jdeploy\mapper\JavaWebDeployMapper.java

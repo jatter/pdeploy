@@ -13,4 +13,5 @@ com\xxg\jdeploy\websocket\LogWebSocketHandle.class
 com\xxg\jdeploy\controller\IndexController.class
 com\xxg\jdeploy\mapper\JavaWebDeployMapper.class
 com\xxg\jdeploy\controller\JavaWebDeployController.class
+com\xxg\jdeploy\controller\SystemParamController.class
 com\xxg\jdeploy\service\JavaWebDeployService.class

@@ -19,7 +19,7 @@ CREATE TABLE `java_web_deploy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `parameter_management` (
-  `parameter_id`  VARCHAR(36) NOT null COMMENT '参数ID',
+  `parameter_id` int(10) auto_increment NOT null COMMENT '参数ID',
   `uuid`  VARCHAR(36) NOT null COMMENT 'UUID',
   `parameter_name` VARCHAR(255) NOT null COMMENT '参数名称',
   `parameter_value` VARCHAR(255) NOT null COMMENT '参数值',

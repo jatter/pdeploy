@@ -101,7 +101,7 @@
 							<a class="btn waves-light waves-effect white-text" id="btn-deploy">部署</a>
 							<a class="btn waves-light waves-effect white-text" id="btn-restart">重启</a>
 							<a class="btn waves-light waves-effect white-text" id="btn-stop">停止</a>
-							<a class="btn waves-light waves-effect white-text" id="btn-parameterManagement" href="${pageContext.request.contextPath}/javawebdeploy/parameterManagement/${detail.uuid}">参数管理</a>
+							<a class="btn waves-light waves-effect white-text" id="btn-parameterManagement" href="${pageContext.request.contextPath}/systemparam/parameterManagement/${detail.uuid}">参数管理</a>
 						</p>
 					</div>
 				</div>

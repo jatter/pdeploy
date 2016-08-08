@@ -2,7 +2,6 @@ package com.xxg.jdeploy.controller;
 
 import com.xxg.jdeploy.domain.JavaWebDeployInfo;
 import com.xxg.jdeploy.service.JavaWebDeployService;
-import com.xxg.jdeploy.service.JavaWebParameterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,8 +26,7 @@ public class JavaWebDeployController {
 	@Autowired
 	private JavaWebDeployService javaWebDeployService;
 
-	@Autowired
-	private JavaWebParameterService javaWebParameterService;
+
 	/**
 	 * 添加项目页面
 	 */
@@ -43,7 +41,7 @@ public class JavaWebDeployController {
 	 */
 	@RequestMapping(value = "insert", method = RequestMethod.POST)
 	public String insert(JavaWebDeployInfo javaWebDeployInfo) {
-		String uuid = UUID.randomUUID().toString();
+	String uuid = UUID.randomUUID().toString();
 		javaWebDeployInfo.setUuid(uuid);
 		javaWebDeployService.insert(javaWebDeployInfo);
 		return "redirect:/javawebdeploy/detail/" + uuid;
@@ -56,15 +54,6 @@ public class JavaWebDeployController {
 	public ModelAndView detail(@PathVariable String uuid) {
 		ModelAndView mv = new ModelAndView("javawebdeploy/detail");
 		mv.addObject("detail", javaWebDeployService.getDetail(uuid));
-		return mv;
-	}
-	/**
-	 * 获取参数列表
-	 */
-	@RequestMapping(value = "parameterManagement/{uuid}", method = RequestMethod.GET)
-	public ModelAndView parameterManagement(@PathVariable String uuid) {
-		ModelAndView mv = new ModelAndView("javawebdeploy/parameterManagement");
-		mv.addObject("parameterManagement", javaWebParameterService.getParameter(uuid));
 		return mv;
 	}
 

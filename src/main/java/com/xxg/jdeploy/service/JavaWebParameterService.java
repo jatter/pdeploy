@@ -1,5 +1,6 @@
 package com.xxg.jdeploy.service;
 
+import com.xxg.jdeploy.domain.JavaWebDeployInfo;
 import com.xxg.jdeploy.domain.JavaWebParameterInfo;
 import com.xxg.jdeploy.mapper.JavaWebParameterMapper;
 import com.xxg.jdeploy.util.ShellUtil;
@@ -31,11 +32,10 @@ public class JavaWebParameterService {
     @Value("${javawebdeploy.jettypath}")
     private String jettyPath;
 
-//    public List<JavaWebParameterInfo> getList() {
-//        return javaWebParameterMapper.getList();
-//    }
-
-    public List<JavaWebParameterInfo> getParameter(String uuid) {
+    public  List<JavaWebParameterInfo> getList(String uuid) {
+        return javaWebParameterMapper.getList(uuid);
+    }
+    public JavaWebParameterInfo getParameter(String uuid) {
         return javaWebParameterMapper.getParameter(uuid);
     }
 
