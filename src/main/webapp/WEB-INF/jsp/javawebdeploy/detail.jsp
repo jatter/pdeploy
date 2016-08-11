@@ -64,6 +64,19 @@
 			-webkit-transform: rotate(-360deg);
 		}
 	}
+	.ui-input-file {
+		position: absolute;
+		right: 0;
+		top: 0;
+		_zoom: 30;
+		font-size: 300px\9;
+		height: 100%;
+		_height: auto;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-ms-filter: "alpha(opacity=0)";
+		cursor: pointer;
+	}
 </style>
 <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/materialize/0.97.0/js/materialize.min.js"></script>
@@ -102,6 +115,13 @@
 							<a class="btn waves-light waves-effect white-text" id="btn-restart">重启</a>
 							<a class="btn waves-light waves-effect white-text" id="btn-stop">停止</a>
 							<a class="btn waves-light waves-effect white-text" id="btn-parameterManagement" href="${pageContext.request.contextPath}/systemparam/parameterManagement/${detail.uuid}">参数管理</a>
+						<form action="${pageContext.request.contextPath}/upload/uploadId" enctype="multipart/form-data" method="post">
+							<a class="btn waves-light waves-effect white-text" id="btn-fileupload">上传文件
+								<input type="file" name="file" accept="file/*">
+							</a>
+							<input type="submit" value="提交">
+						</form>
+
 						</p>
 					</div>
 				</div>
