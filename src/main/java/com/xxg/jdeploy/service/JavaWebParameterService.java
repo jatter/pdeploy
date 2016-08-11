@@ -35,13 +35,23 @@ public class JavaWebParameterService {
     public  List<JavaWebParameterInfo> getList(String uuid) {
         return javaWebParameterMapper.getList(uuid);
     }
-    public JavaWebParameterInfo getParameter(String uuid) {
-        return javaWebParameterMapper.getParameter(uuid);
+
+    public JavaWebParameterInfo getParameterByParameterId(String parameterId) {
+        return javaWebParameterMapper.getParameterByParameterId(parameterId);
     }
 
     public void insert(JavaWebParameterInfo javaWebParameterInfo) {
         javaWebParameterMapper.insert(javaWebParameterInfo);
     }
+
+    public void update(JavaWebParameterInfo javaWebParameterInfo) {
+        javaWebParameterMapper.update(javaWebParameterInfo);
+    }
+
+    public void delete(String parameterId) {
+        javaWebParameterMapper.delete(parameterId);
+    }
+
 
 
 }

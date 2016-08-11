@@ -31,32 +31,35 @@
 
 <div class="container">
   <a class="btn waves-light waves-effect white-text" style="float: right;" href="${pageContext.request.contextPath}/systemparam/new/${projectId}/">添加</a>
-  <table class="table table-bordered table-hover">
-    <thead style="color: #999b91; font-size: 20px;">
-    <tr>
-      <th>参数ID</th>
-      <th>参数名称</th>
-      <th>参数值</th>
-      <th>参数路径</th>
-      <th>正则匹配</th>
-      <th>操作</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="item" items="${parameterList}">
+    <table class="table table-bordered table-hover">
+     <thead style="color: #999b91; font-size: 20px;">
+      <tr>
+       <th>参数ID</th>
+       <th>参数名称</th>
+       <th>参数值</th>
+       <th>参数路径</th>
+       <th>正则匹配</th>
+       <th>操作</th>
+      </tr>
+     </thead>
+     <tbody>
+     <c:forEach var="item" items="${parameterList}">
         <tr>
-            <td>${item.parameter_id}</td>
-            <td>${item.parameter_name}</td>
-            <td>${item.parameter_value}</td>
-            <td>${item.parameter_path}</td>
-            <td>${item.regular}</td>
-            <td><a class="btn waves-light waves-effect white-text" href="${pageContext.request.contextPath}/systemparam/changeparam/${item.uuid}">修改</a></td>
+          <td>${item.parameter_id}</td>
+          <td>${item.parameter_name}</td>
+          <td>${item.parameter_value}</td>
+          <td>${item.parameter_path}</td>
+          <td>${item.regular}</td>
+          <td>
+            <a class="btn waves-light waves-effect white-text" href="${pageContext.request.contextPath}/systemparam/changeParam/${item.uuid}/${item.parameter_id}/">修改</a>
+            <a class="btn waves-light waves-effect white-text" href="${pageContext.request.contextPath}/systemparam/delete/${item.uuid}/${item.parameter_id}/">删除</a>
+            <a class="btn waves-light waves-effect white-text" href="${pageContext.request.contextPath}/systemparam/readFile/${item.parameter_id}/">同步</a>
+          </td>
         </tr>
-    </c:forEach>
-    </tbody>
-  </table>
+     </c:forEach>
+     </tbody>
+   </table>
 </div>
-
 
 <footer class="page-footer" style="padding-top: 0; margin-top: 40px;">
   <div class="footer-copyright">
@@ -66,6 +69,14 @@
     </div>
   </div>
 </footer>
-
+<div id="alert-modal" class="modal">
+    <div class="modal-content">
+        <p class="grey-text">提示</p>
+        <p class="text-alert"></p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">关闭</a>
+    </div>
+</div>
 </body>
 </html>
