@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../noahgate_led/apache-ofbiz.iml" filepath="$PROJECT_DIR$/../noahgate_led/apache-ofbiz.iml" />
       <module fileurl="file://$PROJECT_DIR$/pdeploy.iml" filepath="$PROJECT_DIR$/pdeploy.iml" />
     </modules>
   </component>
